@@ -1,0 +1,60 @@
+## Registrar un nuevo usuarios
+POST https://mockmentor.4.us-1.fl0.io/auth/register
+Content-Type: application/json 
+
+{    
+    "firstname": "Alonso",
+    "lastname": "Villazón",
+    "email": "avillazon@Budgetapp.com",
+    "password":"Welcome@9897"
+}
+
+###Login
+POST https://mockmentor.4.us-1.fl0.io/api/v1/invoices
+Content-Type: application/json 
+
+{         
+    "email": "avillazon@Budgetapp.com",
+    "password":"Welcome@9897"
+}
+
+### Recuperar el budge de un usuario que se hizo login
+GET https://mockmentor.4.us-1.fl0.io/api/v1/invoices
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3OGU5OThiYS1iZGVhLTQ5ZmMtOGM0MS01Nzc2NzJiMDNkYjciLCJlbWFpbCI6ImF2aWxsYXpvbkBCdWRnZXRhcHAuY29tIiwicm9sZSI6IlNUVURFTlQiLCJpYXQiOjE3MTE3OTc1NDYsImV4cCI6MTcxMTgwMTE0Nn0.FtxwW3jsL-JhmGQ52LWK3cwGid4968kdqqpMSGlSP_o
+
+### Creamos un invoices
+POST http://localhost:8080/api/usuario/addUsuario
+Content-Type: application/json
+
+    {
+    "nombre": "Yamile",
+    "apellidos": "Hallasi",
+    "email": "yamile@pcgaming.com",
+    "password": "yamil232",
+    "fechacaptura": "2024-03-31"
+  }
+
+### Recuperar un invoices
+GET http://localhost:8080/api/usuario/findAll
+Content-Type: application/json
+
+### Recuperar un usuario
+GET http://localhost:8080/api/usuario/getUsuario/8
+Content-Type: application/json
+
+### Modificar un usuario
+PUT http://localhost:8080/api/usuario/updateUsuario/8
+Content-Type: application/json
+
+{
+  "id_usuarios": 8,
+  "nombre": "Ana",
+  "apellidos": "Paola",
+  "email": "apa@uap.com",
+  "password": "apa123",
+  "fechacaptura": "2024-03-03T05:00:00.000+00:00"
+}
+
+
+
